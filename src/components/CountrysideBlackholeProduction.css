@@ -1,0 +1,331 @@
+/* CountrysideBlackholeProduction.css */
+
+.countryside-blackhole-production {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  background-color: #f5f5f5;
+}
+
+.countryside-blackhole-production h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+}
+
+/* Energy Panel Styling */
+.energy-panel {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.energy-panel h2 {
+  color: #2c3e50;
+  border-bottom: 3px solid #3498db;
+  padding-bottom: 10px;
+  margin-bottom: 25px;
+  font-size: 1.8rem;
+}
+
+.energy-panel h3 {
+  color: #34495e;
+  margin-top: 25px;
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+}
+
+/* Coupling Controls */
+.coupling-controls {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 25px;
+}
+
+.slider-group {
+  margin-bottom: 20px;
+}
+
+.slider-group label {
+  display: block;
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+}
+
+.slider-group .value {
+  color: #3498db;
+  font-weight: 700;
+  margin-left: 10px;
+  font-size: 1.15rem;
+}
+
+.coupling-slider {
+  width: 100%;
+  height: 8px;
+  border-radius: 5px;
+  background: linear-gradient(to right, #e0e0e0 0%, #3498db 100%);
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+}
+
+.coupling-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #3498db;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s;
+}
+
+.coupling-slider::-webkit-slider-thumb:hover {
+  background: #2980b9;
+  transform: scale(1.1);
+}
+
+.coupling-slider::-moz-range-thumb {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #3498db;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s;
+}
+
+.coupling-slider::-moz-range-thumb:hover {
+  background: #2980b9;
+  transform: scale(1.1);
+}
+
+/* Metrics Display */
+.metrics-display {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.metric-card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s;
+}
+
+.metric-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.metric-label {
+  font-size: 0.9rem;
+  opacity: 0.9;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.metric-value {
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* Baseline Data */
+.baseline-data {
+  background: #e8f5e9;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 25px;
+  border-left: 4px solid #4caf50;
+}
+
+.baseline-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #c8e6c9;
+}
+
+.baseline-item:last-child {
+  border-bottom: none;
+}
+
+.baseline-label {
+  font-weight: 600;
+  color: #2e7d32;
+}
+
+.baseline-value {
+  color: #1b5e20;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+/* CSV Uploader */
+.csv-uploader {
+  background: #fff3e0;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 25px;
+  border-left: 4px solid #ff9800;
+}
+
+.upload-section {
+  margin-bottom: 10px;
+}
+
+.upload-label {
+  display: block;
+  font-weight: 600;
+  color: #e65100;
+  margin-bottom: 10px;
+}
+
+.csv-input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: 2px dashed #ff9800;
+  border-radius: 6px;
+  background: white;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+.csv-input:hover {
+  border-color: #f57c00;
+  background: #fff8f0;
+}
+
+.file-info {
+  margin-top: 10px;
+  padding: 10px;
+  background: white;
+  border-radius: 6px;
+  border: 1px solid #ffcc80;
+}
+
+.file-name {
+  color: #e65100;
+  font-weight: 600;
+}
+
+.csv-format-info {
+  margin-top: 10px;
+}
+
+.csv-format-info small {
+  color: #bf360c;
+  font-style: italic;
+}
+
+/* Control Buttons */
+.control-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+.reset-button,
+.recalculate-button {
+  padding: 12px 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.reset-button {
+  background: #e74c3c;
+  color: white;
+}
+
+.reset-button:hover {
+  background: #c0392b;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.recalculate-button {
+  background: #27ae60;
+  color: white;
+}
+
+.recalculate-button:hover {
+  background: #229954;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Simulation Info */
+.simulation-info {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-left: 5px solid #9b59b6;
+}
+
+.simulation-info h3 {
+  color: #8e44ad;
+  margin-bottom: 15px;
+}
+
+.simulation-info p {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.simulation-info strong {
+  color: #8e44ad;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .countryside-blackhole-production {
+    padding: 10px;
+  }
+
+  .countryside-blackhole-production h1 {
+    font-size: 2rem;
+  }
+
+  .energy-panel {
+    padding: 20px;
+  }
+
+  .metrics-display {
+    grid-template-columns: 1fr;
+  }
+
+  .control-buttons {
+    flex-direction: column;
+  }
+
+  .reset-button,
+  .recalculate-button {
+    width: 100%;
+  }
+}
