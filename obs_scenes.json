@@ -1,0 +1,31 @@
+{
+  "profile": "Entertainer-Minimal",
+  "scenes": [
+    {
+      "name": "A-CAM",
+      "sources": [
+        "VideoCaptureDevice",
+        "AudioInput",
+        "LowerThird"
+      ],
+      "notes": "캠 단독, 로고 워터마크 30%"
+    },
+    {
+      "name": "A-CAM + Slides",
+      "sources": [
+        "VideoCaptureDevice",
+        "WindowCapture",
+        "AudioInput",
+        "LowerThird"
+      ]
+    },
+    {
+      "name": "Vertical-Shorts",
+      "sources": [
+        "VideoCaptureDevice(Scaled 9:16)",
+        "AudioInput",
+        "Caption"
+      ]
+    }
+  ]
+}

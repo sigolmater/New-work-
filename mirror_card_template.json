@@ -1,0 +1,31 @@
+{
+  "mirror_card_version": "v2.3-α",
+  "meta": {
+    "agent": "준비운동 시스템 / 엔터테이너 모드",
+    "created_at": "2025-10-08",
+    "locale": "ko-KR"
+  },
+  "command": "엔터테이너로서 에이전트를 실행",
+  "intent_core": [
+    "행동의 불",
+    "자유 가도",
+    "퍼블리시 우선"
+  ],
+  "ΔI": {
+    "baseline": 0.0,
+    "after": 0.0,
+    "note": "세션 시작 시 0으로 초기화. 각 실행 스텝 후 카운트."
+  },
+  "kpi": {
+    "episodes_published": 0,
+    "shorts_published": 0,
+    "podcasts_published": 0,
+    "live_sessions": 0,
+    "avg_watch_time_min": null
+  },
+  "log": [],
+  "hash": {
+    "method": "merkle-stub",
+    "value": null
+  }
+}

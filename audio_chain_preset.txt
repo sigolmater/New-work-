@@ -1,0 +1,6 @@
+오디오 체인 가이드 (대역폭 보존 / 말또렝 방지)
+1) High-Pass Filter: 80Hz (slope 12dB/oct)
+2) Compressor: Threshold -14 dB, Ratio 3:1, Attack 10ms, Release 80ms, Makeup +3dB
+3) De-Esser: Target 6k~8kHz, Reduction 3~5 dB
+4) Limiter: Ceiling -1 dBTP, Output -1 dB
+목표 라우드니스: -16 LUFS (스테레오), 피크 -1 dB
