@@ -40,7 +40,8 @@ const CountrysideBlackholeProduction = () => {
     const params = [alpha, beta, gamma, lambda];
     const sum = params.reduce((acc, val) => acc + val, 0);
     
-    // Normalize parameters
+    // Normalize parameters (when sum is 0, normalized values will be NaN,
+    // which will be filtered out by the p > 0 check, resulting in entropy of -0)
     const normalized = params.map(p => p / sum);
     
     // Calculate Shannon entropy
