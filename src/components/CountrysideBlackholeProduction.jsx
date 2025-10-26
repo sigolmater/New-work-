@@ -40,8 +40,6 @@ const CountrysideBlackholeProduction = () => {
     const params = [alpha, beta, gamma, lambda];
     const sum = params.reduce((acc, val) => acc + val, 0);
     
-    if (sum === 0) return 0;
-    
     // Normalize parameters
     const normalized = params.map(p => p / sum);
     
