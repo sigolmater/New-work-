@@ -2,7 +2,16 @@
 # Ray tracing simulation for box reflections
 
 class Ray:
-    """Ray with position and direction"""
+    """
+    Ray with position and direction.
+    
+    Args:
+        pos: 3D position tuple (x, y, z)
+        dir: 3D direction tuple (dx, dy, dz) - will be automatically normalized
+        
+    The direction vector is normalized to unit length upon initialization.
+    If the direction has zero or near-zero magnitude, defaults to (1, 0, 0).
+    """
     def __init__(self, pos, dir):
         self.pos = tuple(pos)
         self.dir = tuple(dir)
@@ -11,6 +20,9 @@ class Ray:
         mag = (dx*dx + dy*dy + dz*dz) ** 0.5
         if mag > 1e-12:
             self.dir = (dx/mag, dy/mag, dz/mag)
+        else:
+            # Default to x-axis if direction is zero
+            self.dir = (1.0, 0.0, 0.0)
     
     def at(self, t):
         """Get position at parameter t"""
@@ -24,9 +36,19 @@ def run(ray, max_bounces):
     """
     Simulate ray bouncing inside unit cube [-1, 1]^3
     
+    Args:
+        ray: Ray object with initial position and direction
+        max_bounces: Maximum number of bounces to simulate (int)
+    
     Returns:
-        (final_ray, history)
-    where history is list of (position, (axis, sign)) tuples
+        tuple: (final_ray, history)
+            - final_ray: Ray object with final position and direction after all bounces
+            - history: list of (position, (axis, sign)) tuples where:
+                - position is (x, y, z) tuple at bounce point
+                - axis is 'x', 'y', or 'z' indicating which wall was hit
+                - sign is 1 or -1 indicating positive or negative wall
+    
+    If no intersection is found (shouldn't happen in closed box), simulation stops early.
     """
     history = []
     pos = ray.pos
