@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import './CountrysideBlackholeProduction.css';
 
 /**
@@ -62,7 +62,7 @@ const CountrysideBlackholeProduction = () => {
    * Compute modified ΔI value considering efficiency
    * and calculate virtual energy, real energy, throughput gain, and latency reduction
    */
-  const computeEnergyMetrics = () => {
+  const computeEnergyMetrics = useCallback(() => {
     // Calculate efficiency using entropy
     const eff = computeEntropy(alpha, beta, gamma, lambda);
     setEfficiency(eff);
@@ -88,12 +88,12 @@ const CountrysideBlackholeProduction = () => {
     // Latency Reduction (Lred) - reduction in latency
     const reduction = baselineData.latency * (1 - modifiedDeltaI * lambda * eff);
     setLatencyReduction(reduction);
-  };
+  }, [alpha, beta, gamma, lambda, baselineData]);
 
   // Recalculate metrics when parameters change
   useEffect(() => {
     computeEnergyMetrics();
-  }, [alpha, beta, gamma, lambda, baselineData]);
+  }, [computeEnergyMetrics]);
 
   /**
    * Handle CSV file upload
