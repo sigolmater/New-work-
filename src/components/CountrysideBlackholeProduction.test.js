@@ -59,7 +59,10 @@ describe('CountrysideBlackholeProduction Component', () => {
     
     fireEvent.change(alphaSlider, { target: { value: '0.7' } });
     
-    expect(screen.getByText(/0\.700/)).toBeInTheDocument();
+    // Check that the slider value has been updated
+    expect(alphaSlider).toHaveValue('0.7');
+    // Check that at least one instance of 0.700 appears in the document
+    expect(screen.getAllByText(/0\.700/).length).toBeGreaterThan(0);
   });
 
   test('reset button restores default values', () => {
