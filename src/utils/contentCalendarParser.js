@@ -55,8 +55,8 @@ export const isToday = (dateStr) => {
  * @returns {boolean} True if the date is today or in the future
  */
 export const isFutureOrToday = (dateStr) => {
-  const date = new Date(dateStr);
-  const today = new Date(getTodayDate());
+  const date = new Date(dateStr + 'T00:00:00');
+  const today = new Date(getTodayDate() + 'T00:00:00');
   return date >= today;
 };
 
@@ -90,8 +90,8 @@ export const formatDisplayDate = (dateStr) => {
  * @returns {number} Number of days until the date
  */
 export const getDaysUntil = (dateStr) => {
-  const targetDate = new Date(dateStr);
-  const today = new Date(getTodayDate());
+  const targetDate = new Date(dateStr + 'T00:00:00');
+  const today = new Date(getTodayDate() + 'T00:00:00');
   const diffTime = targetDate - today;
   const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
   return diffDays;
