@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import './CountrysideBlackholeProduction.css';
+import ContentReminder from './ContentReminder';
 
 /**
  * CountrysideBlackholeProduction Component
  * 
- * Integrates energy panel, coupling slider, and CSV uploader features
+ * Integrates energy panel, coupling slider, CSV uploader, and content reminder features
  * for the ray-tracing simulation with entropy-based efficiency calculations.
  */
 const CountrysideBlackholeProduction = () => {
@@ -62,7 +63,7 @@ const CountrysideBlackholeProduction = () => {
    * Compute modified ΔI value considering efficiency
    * and calculate virtual energy, real energy, throughput gain, and latency reduction
    */
-  const computeEnergyMetrics = () => {
+  const computeEnergyMetrics = useCallback(() => {
     // Calculate efficiency using entropy
     const eff = computeEntropy(alpha, beta, gamma, lambda);
     setEfficiency(eff);
@@ -88,12 +89,12 @@ const CountrysideBlackholeProduction = () => {
     // Latency Reduction (Lred) - reduction in latency
     const reduction = baselineData.latency * (1 - modifiedDeltaI * lambda * eff);
     setLatencyReduction(reduction);
-  };
+  }, [alpha, beta, gamma, lambda, baselineData]);
 
   // Recalculate metrics when parameters change
   useEffect(() => {
     computeEnergyMetrics();
-  }, [alpha, beta, gamma, lambda, baselineData]);
+  }, [computeEnergyMetrics]);
 
   /**
    * Handle CSV file upload
@@ -155,6 +156,9 @@ const CountrysideBlackholeProduction = () => {
   return (
     <div className="countryside-blackhole-production">
       <h1>Ray Tracing Simulation</h1>
+      
+      {/* Content Calendar Reminder */}
+      <ContentReminder />
       
       {/* Energy Panel: 현실 연결 (α-Coupling) */}
       <div className="energy-panel">
