@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SecureAI</string>
+    <string name="btn_google_login">Google 로그인</string>
+    <string name="label_openai_key">OpenAI API Key 등록</string>
+    <string name="hint_api_key">sk-...</string>
+    <string name="btn_save_key">저장 후 시작</string>
+    <string name="hint_prompt">질문을 입력하세요...</string>
+    <string name="btn_query">전송</string>
+    <!-- default_web_client_id는 google-services.json 추가 후 자동 생성됩니다 -->
+</resources>
