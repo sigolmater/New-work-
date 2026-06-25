@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">따뜻한 손길</string>
+    <string name="tagline">선한 행동이 온기가 되는 플랫폼</string>
+
+    <!-- Login -->
+    <string name="btn_google_login">Google로 시작하기</string>
+
+    <!-- Navigation -->
+    <string name="nav_home">홈</string>
+    <string name="nav_volunteer">봉사활동</string>
+    <string name="nav_wallet">온기지갑</string>
+    <string name="nav_profile">내 정보</string>
+    <string name="fab_request_desc">도움 요청하기</string>
+
+    <!-- Home -->
+    <string name="home_title">도움이 필요한 이웃</string>
+    <string name="empty_requests">현재 도움 요청이 없습니다</string>
+
+    <!-- Volunteer -->
+    <string name="volunteer_title">내 봉사 활동</string>
+    <string name="empty_volunteer">아직 봉사 활동 내역이 없습니다</string>
+
+    <!-- Wallet -->
+    <string name="label_warm_coin">온기코인 잔액</string>
+    <string name="label_tx_history">거래 내역</string>
+    <string name="empty_transactions">거래 내역이 없습니다</string>
+    <string name="volunteer_count_format">총 %d회 봉사</string>
+
+    <!-- Profile -->
+    <string name="label_my_requests">내 도움 요청</string>
+    <string name="btn_logout">로그아웃</string>
+    <string name="profile_stats_format">봉사 %d회 · 요청 %d건</string>
+
+    <!-- Request Help -->
+    <string name="title_request_help">도움 요청하기</string>
+    <string name="label_category">카테고리</string>
+    <string name="hint_title">제목 (예: 장보기 도움 요청)</string>
+    <string name="hint_description">상세 내용을 입력해 주세요</string>
+    <string name="hint_location">지역 (예: 서울 은평구)</string>
+    <string name="label_reward_coin">보상 온기코인</string>
+    <string name="btn_submit_request">요청 등록하기</string>
+    <string name="error_fill_all_fields">모든 항목을 입력해 주세요</string>
+    <string name="request_submitted">도움 요청이 등록되었습니다</string>
+
+    <!-- Request Detail -->
+    <string name="label_location">위치</string>
+    <string name="label_requester">요청자</string>
+    <string name="label_reward">보상</string>
+    <string name="label_status">상태</string>
+    <string name="status_pending">대기 중</string>
+    <string name="status_accepted">진행 중</string>
+    <string name="status_completed">완료</string>
+    <string name="btn_accept">봉사하기</string>
+    <string name="btn_complete">완료하기</string>
+    <string name="accepted_message">봉사 신청이 완료되었습니다!</string>
+    <string name="completed_message">봉사 완료! %d 온기코인을 획득했습니다 🎉</string>
+
+    <!-- Format -->
+    <string name="coin_format">%d 온기코인</string>
+
+    <!-- default_web_client_id는 google-services.json 추가 후 자동 생성됩니다 -->
+</resources>

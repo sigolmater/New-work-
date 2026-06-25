@@ -1,0 +1,1 @@
+-keep class com.codingfighter.warmtouch.data.model.** { *; }
